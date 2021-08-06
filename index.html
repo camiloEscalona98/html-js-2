@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <LINK REL=StyleSheet HREF="index.css" TYPE="text/css" MEDIA=screen>
+</head>
+
+<script type="text/javascript">
+
+    function calculo() {
+       
+    var texto = document.getElementById('txt_texto').value;
+    arreglo = texto.split(' ');
+    
+    var resultado = eval(0);
+    for(var i = 0; i<2; i++)
+    {
+        if(arreglo[1] == "+")
+        {
+           //suma
+           resultado = ( eval(arreglo[0])  + eval(arreglo[2]) );
+           alert(resultado);
+        }
+        else if(arreglo[1] == "-" )
+        {
+            resultado = eval(arreglo[0] - arreglo[2]);
+            alert(resultado);
+            //resta
+        } 
+        else if(arreglo[1] == "/"){
+            resultado = eval(arreglo[0] / arreglo[2]);
+            alert(resultado);
+            //division
+        }
+        else if(arreglo[1]  == "*"){
+            resultado = eval(arreglo[0] * arreglo[2]);
+            alert(resultado);
+            //multiplicacion
+        }
+
+    }
+
+    
+    }
+
+</script>
+
+<body>
+    <section>
+        <form name="forma">
+            <div class="centro">
+                <div class="forma">
+                    <div>
+
+                        <input class="caja" type="text" placeholder="Ingresa operacion matematica" id="txt_texto" name="txt_texto">
+                        
+                            <h4>Ingresar datos separados por un espacio, ejemplo: 20 * 10</h4>
+                            <button onclick="calculo()">Calcular</button>
+                    </div>
+                   
+                    
+
+                </div>
+                
+            </div>
+            
+        </form>
+    </section>
+</body>
+
+</html>
